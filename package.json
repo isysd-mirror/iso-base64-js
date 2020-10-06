@@ -25,7 +25,7 @@
     "lint": "standard",
     "test": "npm run unit",
     "unit": "tape test/*.js",
-    "preinstall": "gpm -n .. -t .. -u https -i .",
+    "preinstall": "gpm -n .. -t .. -u https -d 1 -i .",
     "postinstall": "node -e \"try { require('../esm/esm.js')(module); } catch (e) {require('child_process').execSync('npm i', {cwd: require('path').join('..', 'esm')})}\""
   },
   "devDependencies": {
